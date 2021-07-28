@@ -1,6 +1,7 @@
 import React from "react";
 import { Table, ButtonGroup } from "react-bootstrap";
 import Price from "./Price";
+import Calendar from "./Calender";
 
 
 // Loading all images in an array.
@@ -117,12 +118,7 @@ function GameRows(props) {
                     style={{ width: "2.2em", height: "2.2em", float: "left" }}
                   />
                   <p className="ml-2 mx-0 my-0">Report</p>
-                  <img
-                    alt="calendar"
-                    className="ml-5"
-                    src={images["calendar.png"].default}
-                    style={{ width: "2.5em", height: "2.5em", float: "left" }}
-                     />
+                    <Calendar item={{ name: arr['name'], time: arr['createdOn'] }} updatedData={props.updatedData} />
                 </ButtonGroup>
               </td>
             </tr>
